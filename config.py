@@ -1,0 +1,14 @@
+from mrcnn.config import Config
+
+class PageConfig(Config):
+	NAME = "PAGES"
+	GPU_COUNT = 4
+	IMAGES_PER_GPU = 3
+	IMAGE_MIN_DIM = 1000
+	IMAGE_MAX_DIM = 1300
+	RPN_ANCHOR_SCALES = (128,265,512,768)
+	TRAIN_ROIS_PER_IMAGE = 15
+	STEPS_PER_EPOCH = 500
+	VALIDATION_STEPS = 25
+
+
