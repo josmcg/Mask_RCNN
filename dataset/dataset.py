@@ -64,7 +64,7 @@ class PageDataset(utils.Dataset):
         if not self.nomask:
             str_id = self.image_info[image_id]["str_id"]
             anno_path = "annotations/{}.xml".format(str_id)
-            anno_path = os.path.join(self.path, anno_path)
+            anno_path = os.path.join(self.path,self.split ,anno_path)
             annotation = load_from_file(anno_path)
             if self.collapse:
                 annotation.collapse_classes_icdar()
