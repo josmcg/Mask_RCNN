@@ -4,7 +4,7 @@ import os
 
 class TestTrain(unittest.TestCase):
     def setUp(self):
-        self.epochs = 1
+        self.epochs = 4
         self.save_dir = "tests/data/weights"
         self.data_dir = "tests/data"
         self.collapse = 0
