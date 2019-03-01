@@ -6,7 +6,7 @@ from dataset.dataset import ICDAR_convert
 
 
 
-def train(epochs, save_dir, data_dir, collapse):
+def train(epochs, save_dir, data_dir, collapse=False):
     collapse = bool(collapse)
     # just in case
     if data_dir[-1] != '/':
@@ -33,12 +33,12 @@ def train(epochs, save_dir, data_dir, collapse):
                 layers='heads')
 
 @click.command()
-@click.argument("epochs")
+@click.argument("epochs",type=click.INT)
 @click.argument("save_dir")
 @click.argument("data_dir")
 @click.option("--collapse", default=False)
-def main(*inputs):
-    train(*inputs)
+def main(*inputs,**kwargs):
+    train(*inputs,**kwargs)
 
 
 if __name__ == "__main__":
