@@ -14,5 +14,4 @@ class PageConfig(Config):
     STEPS_PER_EPOCH = 1000
     VALIDATION_STEPS = 100
     NUM_CLASSES = len(classes) + 1 # background class
-
-
+    
